@@ -1,0 +1,14 @@
+Urban Renewal Legal Scout — Dashboard Run Instructions
+
+Install dependencies if needed:
+
+pip install streamlit pandas plotly
+
+Run the dashboard from the project root:
+
+streamlit run app/urban_renewal_legal_scout.py
+
+Input expected:
+data/processed/urban_renewal_scored.csv
+
+If the input file is missing, run Notebooks 01-03 first.
