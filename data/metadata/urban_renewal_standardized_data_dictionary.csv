@@ -1,0 +1,35 @@
+﻿column_name,description,source_column,data_type,example,notes
+record_id,Stable local record identifier for this project.,derived from MisparMitham or row index,string,UR_4001,Not a legal identifier.
+source_record_id,Original source record or complex identifier.,MisparMitham,string,4001,Preserved from public source when available.
+city,City or locality name.,Yeshuv,string,גבעתים,Hebrew text preserved.
+city_code,Official locality code when supplied.,SemelYeshuv,nullable integer,6300,No values invented.
+neighborhood,Neighborhood name if later available.,,string,,Currently unavailable in source.
+street_or_area,"Street, address, or area label if later available.",,string,,Currently unavailable in source.
+complex_name,Urban renewal complex name.,ShemMitcham,string,ערבי נחל,Core lawyer-facing label.
+plan_number,Planning file or plan number.,MisparTochnit,string,גב/490,Inspect in Mavat when present.
+renewal_type,Raw renewal route/type.,Maslul,string,מיסוי,Not translated or legally interpreted.
+planning_status_raw,Raw planning status from source.,Status,string,תכנית מאושרת - אחרי רישוי,Hebrew value preserved.
+planning_status_normalized,Conservative normalized planning status.,Status and Bebitzua,category,PERMIT_APPROVED,Uses explicit mapping only.
+declared_complex,Whether record appears to be a declared urban renewal complex.,derived,boolean,True,"Robust heuristic, not legal advice."
+existing_units,Existing housing units.,YachadKayam,nullable integer,126,Invalid text becomes missing and is flagged.
+additional_units,Additional housing units.,YachadTosafti,nullable integer,108,Invalid text becomes missing and is flagged.
+proposed_units,Proposed housing units.,YachadMutza,nullable integer,530,Invalid text becomes missing and is flagged.
+permits_total,Total permits count when supplied.,SachHeterim,nullable integer,530,No permit interpretation is added.
+declaration_date,Declaration date as ISO date.,TaarichHachraza,date string,2006-08-20,Parsed day-first.
+validity_year,Year of plan validity or effect when supplied.,ShnatMatanTokef,nullable integer,2012,Source meaning should be verified.
+in_execution,Whether source indicates execution/implementation.,Bebitzua,boolean,False,Normalized yes/no.
+mavat_url,Mavat or planning source URL.,KishurLatar,URL string,https://mavat.iplan.gov.il/SV4/1/5073314/310,Not opened by this notebook.
+map_url,Map URL when supplied.,KishurLaMapa,URL string,https://www.govmap.gov.il/map.html?lay=ADD_PROJECTS_UR_MUCHRAZ&bs=moch_projects|MISPARPROJECT~4001,Not opened by this notebook.
+source_name,Source dataset name.,source_name,string,browser_export_f65a0daf-f737-49c5-9424-d378d52104f5,From Notebook 01 metadata.
+source_url,Preferred source URL for review.,KishurLatar/source_url/KishurLaMapa,URL string,https://mavat.iplan.gov.il/SV4/1/5073314/310,Prefers Mavat URL.
+source_type,Source type metadata.,source_type,string,browser_export_official_data_gov_api,From Notebook 01.
+original_resource_id,Original CKAN resource ID.,original_resource_id,string,f65a0daf-f737-49c5-9424-d378d52104f5,From Notebook 01.
+last_updated,Best available last update date.,ingestion_timestamp or TaarichHachraza,date string,2026-05-26,Uses ingestion date if available.
+confidence_level,HIGH/MEDIUM/LOW confidence label.,derived,category,HIGH,"Operational data confidence, not legal confidence."
+data_confidence_score,0-100 data confidence score.,derived,integer,100,Based on completeness and quality flags.
+data_quality_flag,Pipe-separated data quality flags.,derived,string,OK,Records are retained by default.
+lawyer_note,Short cautious review note.,derived,string,Official record found with indication of post-licensing/permit stage; worth deeper legal and planning review. Plan number exists; inspect Mavat documents. Mavat link is available.,Does not provide legal advice.
+original_file_path,Raw file path from Notebook 01.,original_file_path,string,data\manual_sources\data_gov_f65a0daf_records.json,Technical provenance.
+original_row_index,Original row index in source data.,original_row_index,nullable integer,0,Technical provenance.
+ingestion_timestamp,Notebook 01 ingestion timestamp.,ingestion_timestamp,string,2026-05-26T15:05:10,Technical provenance.
+detected_relevance_reason,Reason Notebook 01 considered the source relevant.,detected_relevance_reason,string,Browser-saved official data.gov.il CKAN datastore_search JSON,Technical provenance.

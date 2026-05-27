@@ -1,0 +1,3 @@
+﻿record_id,source_record_id,city,complex_name,plan_number,planning_status_raw,planning_status_normalized,data_quality_flag,confidence_level,lawyer_note
+UR_5003805,5003805,גבעתים,מרחב תחנת מטרו בן גוריון,,תכנון ראשוני,PLAN_IN_PROGRESS,NEGATIVE_UNIT_VALUE,MEDIUM,Official renewal record found. Planning appears to be in progress; check plan documents and latest public status.
+UR_5009236,5009236,רמת גן,"רג/1811 - קריניצי 109, 111",190,2025,UNKNOWN,INVALID_NUMERIC_UNITS|COLUMN_SHIFT_OR_SOURCE_ANOMALY,MEDIUM,"Official record found, but planning status is unclear or missing; manual verification required. Plan number exists; inspect Mavat documents."

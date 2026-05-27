@@ -1,0 +1,24 @@
+﻿metric,value,notes
+input_rows,938,Rows read from Notebook 02 standardized dataset.
+output_rows,938,Rows written to scored dataset.
+number_of_cities,76,Distinct cities.
+advanced_project_label_0_count,386,Rows with non-advanced public status label.
+advanced_project_label_1_count,552,Rows with advanced public status label.
+mean_planning_maturity_score,62.73987206823028,Average public planning maturity score.
+mean_source_strength_score,96.93496801705757,Average public-source strength score.
+mean_scale_score,71.98827292110875,Average cautious project scale score.
+mean_data_confidence_score,98.72068230277185,Average Notebook 02 data confidence score.
+mean_project_momentum_score,75.8492537313433,Average Project Momentum Score.
+very_high_momentum_records,386,Rows with VERY_HIGH Project Momentum Score.
+high_momentum_records,497,Rows with HIGH Project Momentum Score.
+moderate_momentum_records,53,Rows with MODERATE Project Momentum Score.
+low_momentum_records,2,Rows with LOW Project Momentum Score.
+records_with_quality_issues,2,Rows with non-OK data_quality_flag.
+records_with_ml_score,938,Rows with available ML Similarity Score.
+records_with_oof_ml_score,938,Rows with out-of-fold ML Similarity Score.
+ml_model_used,RandomForestClassifier,"Chosen ML similarity model, if available."
+ml_feature_set_used,leakage_safe_feature_set,Dashboard ML feature set.
+ml_oof_note,Out-of-fold probabilities created with StratifiedKFold(n_splits=5).,OOF scoring status.
+ml_model_persistence_note,Saved fitted ML pipeline to models\ml_similarity_pipeline.joblib and metadata to models\ml_similarity_metadata.json.,Saved dashboard inference model status.
+ml_similarity_pipeline_path,models\ml_similarity_pipeline.joblib,Saved fitted ML pipeline for dashboard inference.
+ml_similarity_metadata_path,models\ml_similarity_metadata.json,Saved ML feature metadata for dashboard inference.

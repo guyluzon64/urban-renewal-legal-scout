@@ -1,0 +1,27 @@
+﻿column_name,description,source_column,data_type,notes
+has_plan_number,Whether a plan number is present.,plan_number,boolean,Source traceability feature.
+has_mavat_url,Whether a Mavat/source URL is present.,mavat_url,boolean,Source traceability feature.
+has_map_url,Whether a map URL is present.,map_url,boolean,Source traceability feature.
+has_existing_units,Whether positive existing units are present.,existing_units,boolean,Scale feature.
+has_proposed_units,Whether positive proposed units are present.,proposed_units,boolean,Scale feature.
+has_permits,Whether permits_total is positive.,permits_total,boolean,"Source feature, not legal finding."
+has_quality_issue,Whether data_quality_flag is not OK.,data_quality_flag,boolean,Used for penalty.
+declaration_year,Year parsed from declaration_date.,declaration_date,integer,Missing if date missing.
+years_since_declaration,Current year minus declaration year.,declaration_year,integer,Indicative age only.
+proposed_to_existing_ratio,Proposed units divided by existing units.,proposed_units/existing_units,float,Missing for invalid/negative/anomalous values.
+additional_to_existing_ratio,Additional units divided by existing units.,additional_units/existing_units,float,Missing for invalid/negative/anomalous values.
+planning_maturity_score,Rule-based public planning maturity score.,planning_status_normalized,0-100,Primary maturity component.
+source_strength_score,Traceable public-source support score.,source fields,0-100,Higher when links and IDs exist.
+scale_score,Cautious project scale signal.,unit fields,0-100,Not progress or legal value.
+data_quality_penalty,Penalty from data_quality_flag.,data_quality_flag,0-50,Subtracted from momentum.
+project_momentum_score,Main explainable Project Momentum Score.,derived,0-100,Indicative public-data maturity signal.
+project_momentum_label,Label for Project Momentum Score.,project_momentum_score,category,VERY_HIGH/HIGH/MODERATE/LOW.
+project_momentum_explanation,Human-readable explanation of score drivers.,derived,string,Cautious language only.
+advanced_project_label,Derived ML target from public status.,planning_status_normalized,0/1,Not a future outcome.
+ml_advancement_score_oof,Out-of-fold ML Similarity Score before dashboard scaling/fallback.,ML model,0-100,Preferred over in-sample scoring when available.
+ml_advancement_score,ML Similarity Score to publicly advanced projects.,ML model,0-100,Leakage-safe feature set; not a prediction.
+ml_advancement_label,Label for ML Similarity Score.,ml_advancement_score,category,Similarity only.
+ml_model_used,Chosen ML model name.,model selection,string,Not available if sklearn unavailable.
+ml_feature_set_used,ML feature set used for dashboard score.,model selection,string,Uses leakage_safe_feature_set when available.
+ml_score_warning,Warning text for ML score.,constant,string,Display in dashboard.
+dashboard_note,Short dashboard-facing note.,derived,string,Manual verification reminder.
