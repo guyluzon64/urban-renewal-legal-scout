@@ -1,0 +1,21 @@
+﻿metric,value,notes
+input_rows,938,Rows read from Notebook 01 raw collected CSV.
+input_columns,25,Columns read from Notebook 01 raw collected CSV.
+output_rows,938,Rows written to standardized dataset.
+output_columns,34,Columns written to standardized dataset.
+duplicate_record_ids,0,Rows whose standardized record_id is duplicated.
+records_with_quality_issues,2,Rows where data_quality_flag is not OK.
+records_missing_city,0,Rows missing city.
+records_missing_complex_name,0,Rows missing complex name.
+records_missing_status,0,Rows missing raw planning status.
+records_with_plan_number,896,Rows with plan number.
+records_with_mavat_url,865,Rows with Mavat/source URL.
+records_with_map_url,938,Rows with map URL.
+records_with_existing_units,929,Rows with existing units.
+records_with_proposed_units,930,Rows with proposed units.
+number_of_cities,76,Distinct cities.
+number_of_status_categories_raw,6,Distinct raw statuses.
+number_of_status_categories_normalized,5,Distinct normalized statuses.
+high_confidence_records,936,Rows with HIGH confidence.
+medium_confidence_records,2,Rows with MEDIUM confidence.
+low_confidence_records,0,Rows with LOW confidence.
